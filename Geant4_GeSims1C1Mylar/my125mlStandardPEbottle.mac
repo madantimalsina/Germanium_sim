@@ -1,0 +1,29 @@
+# Macro file for 125mlStandardPEbottle
+#
+#
+
+/run/initialize
+/control/verbose 1
+/run/verbose 1
+
+# list the existing physics processes
+/process/list
+
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/centre 2.5 0. 2.6 cm
+/gps/pos/rot1 1 0 0
+#/gps/pos/rot2 0 1 0
+/gps/pos/rot2 0 0 1
+/gps/pos/radius 2.5 cm
+#/gps/pos/inner_radius 0. cm
+/gps/pos/halfz 5. cm
+
+/gps/particle gamma
+/gps/ang/type iso
+/gps/ene/mono 131.30 keV
+#Pa-234 18% intensity line
+
+/analysis/setFileName GeRabbit_125mlPEbottle_131keV_100kEvt_shiftedFor2parallelBottles
+
+/run/beamOn 100000

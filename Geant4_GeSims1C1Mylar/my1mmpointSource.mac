@@ -1,0 +1,17 @@
+# Macro file
+# 
+# To be run preferably in batch, without graphics:
+
+/run/initialize
+/control/verbose 1
+/run/verbose 1
+
+# list the existing physics processes
+/process/list
+
+/gps/pos/centre 0. 0. 1. mm
+/gps/ang/type iso
+/gps/energy 131.30 keV
+
+/analysis/setFileName GeRabbit_pointSource_1mm_131keV_100kEvt
+/run/beamOn 100000
